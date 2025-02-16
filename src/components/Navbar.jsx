@@ -12,6 +12,9 @@ const Navbar = () => {
     setToken(false)
     localStorage.removeItem('token')
   }
+  const handleRedirect = () => {
+    window.location.href = "https://quickdoc-admin.onrender.com/";
+  };
 
   return (
     <div className='flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400'>
@@ -63,7 +66,7 @@ const Navbar = () => {
             <NavLink onClick={() => setShowMenu(false)} to='/doctors'><p className='px-4 py-2 rounded inline-block'>ALL DOCTORS</p></NavLink>
             <NavLink onClick={() => setShowMenu(false)} to='/about'><p className='px-4 py-2 rounded inline-block'>ABOUT</p></NavLink>
             <NavLink onClick={() => setShowMenu(false)} to='/contact'><p className='px-4 py-2 rounded inline-block'>CONTACT</p></NavLink>
-            <button className='border border-gray-400 text-gray-700 rounded-full px-4 py-1'>Admin Panel</button>
+            <button onClick={handleRedirect} className='border border-gray-400 text-gray-700 rounded-full px-4 py-1'>Admin Panel</button>
           </ul>
         </div>
       </div>
