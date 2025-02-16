@@ -13,7 +13,7 @@ const Navbar = () => {
     localStorage.removeItem('token')
   }
   const handleRedirect = () => {
-    window.location.href = "https://quickdoc-admin.onrender.com/";
+    window.open("https://quickdoc-admin.onrender.com/", "_blank");
   };
 
   return (
@@ -36,7 +36,7 @@ const Navbar = () => {
           <li className=' py-1 '>CONTACT</li>
           <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden ' />
         </NavLink>
-        <button className='border border-gray-400 text-gray-700 rounded-full px-4 py-1'>Admin Panel</button>
+        <button onClick={handleRedirect} className='border border-gray-400 text-gray-700 rounded-full px-4 py-1'>Admin Panel</button>
       </ul>
       <div className=' flex items-center gap-4 '>
         {
